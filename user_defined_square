@@ -1,0 +1,17 @@
+-- Make Turtle run in a square
+function moveSquare()
+    print("How big would you like the square to be?:")
+    local length = io.read() -- Gets size of square
+    local start = 1
+    local total_sides = 4
+    local current_side = 0
+
+    while current_side < total_sides do
+        for x = start, length do
+            turtle.forward()
+        end    
+        turtle.turnRight()
+        current_side = current_side + 1;
+    end
+end
+moveSquare()
