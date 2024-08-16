@@ -1,4 +1,4 @@
--- Make Turtle run in a square
+-- Make Turtle run in a 4 size square
 function moveSquare()
     local start = 1
     local length = 4
@@ -13,3 +13,4 @@ function moveSquare()
         current_side = current_side + 1;
     end
 end
+moveSquare()
