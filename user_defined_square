@@ -1,7 +1,7 @@
 -- Make Turtle run in a square
 function moveSquare()
     print("How big would you like the square to be?:")
-    local length = io.read() -- Gets size of square
+    local length = tonumber(io.read()) -- Gets size of square
     local start = 1
     local total_sides = 4
     local current_side = 0
