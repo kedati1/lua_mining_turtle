@@ -22,16 +22,17 @@ function moveSquare()
     end
 end
 
+-- returns turtle to start square when operation finishes
 function return_to_start(length)
     local even_counter = 0
-    local odd_counter2 = 0
+    local odd_counter = 1
 
     if length % 2 == 0  then
         turtle.turnLeft()
     else
         turtle.turnRight()
     end
-    while counter < length do
+    while even_counter < length do
         turtle.forward()
         even_counter = even_counter + 1
     end
@@ -39,16 +40,16 @@ function return_to_start(length)
         turtle.turnRight()
     else
         turtle.turnLeft()
-        while odd_counter2 < length do
+        while odd_counter < length do
             turtle.forward()
-            odd_counter2 = odd_counter2 + 1
+            odd_counter = odd_counter + 1
         end
         turtle.turnLeft()
         turtle.turnLeft()
     end
 end
 
--- Tracks turtle whether its at the start or end of a line
+-- Turns turtle based on whether it's at the start or end of a line
 function turtle_alignment(tracker)
     if tracker == 1 then
         turtle.turnLeft()
